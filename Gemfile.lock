@@ -24,8 +24,8 @@ GEM
     method_source (0.8.2)
     multi_json (1.10.1)
     multi_xml (0.5.5)
+    mysql2 (0.3.21)
     newrelic_rpm (3.9.6.257)
-    pg (0.17.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -57,10 +57,16 @@ DEPENDENCIES
   activerecord (~> 3.2.19)
   dotenv
   httparty (~> 0.13.1)
+  mysql2 (~> 0.3.21)
   newrelic_rpm
-  pg (~> 0.17.1)
   pry
   racksh
   rake (~> 10.3.2)
   sinatra (~> 1.4.5)
   sinatra-activerecord (~> 2.0.2)
+
+RUBY VERSION
+   ruby 2.1.2p95
+
+BUNDLED WITH
+   1.17.3

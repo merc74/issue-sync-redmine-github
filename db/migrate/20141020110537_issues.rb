@@ -1,9 +1,13 @@
 class Issues < ActiveRecord::Migration
   def change
-    create_table :issues do |t|
-      t.integer :github_id
-      t.integer :redmine_id
-      t.timestamps
-    end
+    execute <<-SQL
+      CREATE TABLE issues (
+        id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        github_id INT(11),
+        redmine_id INT(11),
+        created_at DATETIME NOT NULL,
+        updated_at DATETIME NOT NULL
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+    SQL
   end
 end

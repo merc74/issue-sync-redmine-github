@@ -1,9 +1,3 @@
-begin
-  require 'dotenv'
-  Dotenv.load
-rescue LoadError => e
-  puts "DotEnv not loaded, it's OK if you are in Production"
-end
-
+File.open('/var/log/apache2/error.log', 'a') { |f| f.puts "Full config.ru loaded" }
 require './app'
-run Sinatra::Application
+run SyncApp

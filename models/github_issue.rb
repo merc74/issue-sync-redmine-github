@@ -1,20 +1,19 @@
 class GithubIssue
+  attr_reader :data
 
   def initialize(data)
-    @raw_data = data
-    @issue = data["issue"]
-    @comment = data["comment"]
+    @data = data
   end
 
   def id
-    @id ||= @issue["number"]
+    @id ||= @data["issue"]["number"]  # Use issue number (e.g., 70), not global ID
   end
 
-  def status
-    @status ||= @issue["state"]
+  def title
+    @title ||= @data["issue"]["title"]
   end
 
-  def assignee
-    @assignee ||= @issue["assignee"]["login"] rescue nil
+  def description
+    @description ||= @data["issue"]["body"]
   end
 end

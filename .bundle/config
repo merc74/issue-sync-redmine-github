@@ -1,0 +1,3 @@
+---
+BUNDLE_WITHOUT: "test:rmagick"
+BUNDLE_WITH: "development"
